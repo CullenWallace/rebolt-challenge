@@ -157,7 +157,6 @@ Add the ability to search/filter the character list. Ideas:
 
 **Things to consider:**
 - Should filtering happen client-side or make a new API request?
-- How do you keep the UI responsive while typing?
 
 ---
 
@@ -182,12 +181,7 @@ Pick one or more if you're moving quickly:
 
 ## Tips
 
-- Commit early and often - we love seeing your thought process
-- It's okay to Google things!
 - Ask questions if something is unclear
 - Have fun with it 🧙‍♂️
 
----
-
-*"Even the smallest person can change the course of the future." - Galadriel*
 
