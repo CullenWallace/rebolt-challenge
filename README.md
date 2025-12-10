@@ -28,10 +28,23 @@ const data = await response.json()
 // data.docs contains the array of characters
 ```
 
-**Useful endpoints:**
-- `GET /character` - List all characters
-- `GET /character/:id` - Get a single character
-- `GET /character/:id/quote` - Get quotes for a character
+**All endpoints:**
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /book` | List of all books (no auth required) |
+| `GET /book/:id` | Get one specific book |
+| `GET /book/:id/chapter` | Get all chapters of a book |
+| `GET /movie` | List of all movies |
+| `GET /movie/:id` | Get one specific movie |
+| `GET /movie/:id/quote` | Get all quotes from a movie |
+| `GET /character` | List of all characters |
+| `GET /character/:id` | Get one specific character |
+| `GET /character/:id/quote` | Get all quotes from a character |
+| `GET /quote` | List of all quotes |
+| `GET /quote/:id` | Get one specific quote |
+| `GET /chapter` | List of all chapters |
+| `GET /chapter/:id` | Get one specific chapter |
 
 > 💡 **Tip:** Mock data is available in `src/data/` if you want to start building components before wiring up API calls.
 
