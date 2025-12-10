@@ -46,6 +46,35 @@ const data = await response.json()
 | `GET /chapter` | List of all chapters |
 | `GET /chapter/:id` | Get one specific chapter |
 
+**Query parameters:**
+
+*Pagination:*
+| Param | Example | Description |
+|-------|---------|-------------|
+| `limit` | `?limit=20` | Limit number of results |
+| `page` | `?page=2` | Page number |
+| `offset` | `?offset=10` | Skip first N results |
+
+*Sorting:*
+| Param | Example | Description |
+|-------|---------|-------------|
+| `sort` | `?sort=name:asc` | Sort by field (asc or desc) |
+
+*Filtering:*
+| Syntax | Example | Description |
+|--------|---------|-------------|
+| `field=value` | `?race=Hobbit` | Match exact value |
+| `field!=value` | `?race!=Orc` | Exclude value |
+| `field=a,b,c` | `?race=Hobbit,Elf` | Match any of these values |
+| `field=/regex/i` | `?name=/gand/i` | Regex match (i = case insensitive) |
+| `field<value` | `?budgetInMillions<100` | Less than |
+| `field>value` | `?academyAwardWins>0` | Greater than |
+
+*Example combining params:*
+```
+/character?race=Hobbit&sort=name:asc&limit=10
+```
+
 > 💡 **Tip:** Mock data is available in `src/data/` if you want to start building components before wiring up API calls.
 
 ---
